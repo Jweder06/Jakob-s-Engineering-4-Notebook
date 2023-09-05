@@ -58,7 +58,7 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 ### Test Link
 [IMportant gif]([http://www.google.com](https://www.youtube.com/watch?v=eBGIQ7ZuuiU))
 ### Test Image
-https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/blob/main/darth-vader-main_4560aff7.jpeg
+![Picture Name Here](darth-vader-main_4560aff7.jpeg)
 ### Test GIF
 https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/blob/main/kitty-cat-sandwich.gif
 ![Picture Name Here](images/kitty-cat-sandwich.gif)
