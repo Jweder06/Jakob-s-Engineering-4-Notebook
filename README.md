@@ -56,7 +56,8 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
 
 ### Test Link
-
+[IMportant gif]([http://www.google.com](https://www.youtube.com/watch?v=eBGIQ7ZuuiU))
 ### Test Image
-
+https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/blob/main/darth-vader-main_4560aff7.jpeg
 ### Test GIF
+https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/blob/main/kitty-cat-sandwich.gif
