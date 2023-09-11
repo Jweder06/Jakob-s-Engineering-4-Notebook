@@ -15,7 +15,7 @@ while True:
         Count_time = Count_time - 1
         time.sleep(1)
         print(Count_time)
-            Rled.value = True
+        Rled.value = True
         if Count_time == 0:
             print("Launch")
             Gled.value = True
