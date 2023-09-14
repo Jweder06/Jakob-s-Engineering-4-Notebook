@@ -31,7 +31,6 @@ while True:
          Gled.value = True
          Rled.value = False
          time.sleep(5)
-         Count_time = 11
     if   Start_value == 2:
         print("abort")
     if Start_value == 3:
