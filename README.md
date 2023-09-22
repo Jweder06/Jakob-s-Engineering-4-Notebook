@@ -26,7 +26,7 @@ while True:
     led.value = False   #LED off
     time.sleep(1)
 ```
-
+### Video
 ### Reflection 
 For me this assignment was a very basic introduction back into VS code. I learned how to operate a pico and how to edit and save the code on the pico. I also learned how to find a pinmap of the pic itself.
 
@@ -70,7 +70,30 @@ In this assignment we where tasked with creating a countdowntime but one that si
 ### Evidence
 ### Code
 ```python
+# type: ignore
+import time
+import board
+import digitalio
 
+Gled = digitalio.DigitalInOut(board.GP0) #Sets LED pin
+Gled.direction = digitalio.Direction.OUTPUT
+Rled = digitalio.DigitalInOut(board.GP2) #Sets LED pin
+Rled.direction = digitalio.Direction.OUTPUT 
+
+Count_time = 11     #creates a variable 
+ 
+while True:
+    if Count_time >= 1: #is it launched?
+        Count_time = Count_time - 1 #count
+        Rled.value = True   #LED blink
+        time.sleep(.5)      #.5 second delay
+        Rled.value = False
+        time.sleep(.5)      #.5 second delay
+        print(Count_time)   #LED blink
+        if Count_time == 0: #Count over?
+            print("Launch")
+            GlAed.value = True  #turn Green LED on
+            Rled.value = False  #Turn Red LED off
 ```
 ### Wiring
 ## Launchpad 3 
@@ -80,7 +103,44 @@ I did the "spicy" version of this assignment this entailed me to make a system t
 ### Evidence
 ### Code
 ```python
+# type: ignore
+import time
+import board
+import digitalio
 
+Gled = digitalio.DigitalInOut(board.GP0)    #Sets LED pin
+Gled.direction = digitalio.Direction.OUTPUT
+Rled = digitalio.DigitalInOut(board.GP2)    #Sets LED pin
+Rled.direction = digitalio.Direction.OUTPUT 
+Button = digitalio.DigitalInOut(board.GP1)  #Sets Button pin
+Button.pull = digitalio.Pull.DOWN   #Sets Pulldown
+Count_time = 11 #creates a variables for button, counter and debounce   
+Button_state = 0
+Start_value = 0
+while True:
+    if Button.value == True and Button_state == 0:  #button debounce
+        Button_state = 1
+        Start_value = Start_value + 1
+    if Button.value == False:  #button debounce
+        Button_state = 0
+    if Count_time >= 1 and Start_value == 1: #Previous Count code
+         Gled.value = False
+         Count_time = Count_time - 1
+         Rled.value = True
+         time.sleep(.5)
+         Rled.value = False
+         time.sleep(.5)
+         print(Count_time)
+    if Count_time == 0: #Previous Launch code
+         print("Launch")
+         Gled.value = True
+         Rled.value = False
+         time.sleep(5)
+    if   Start_value == 2: # Abort detection
+        print("abort")
+    if Start_value == 3:
+        Start_value = 1 #Reset Abort Status
+        Count_time = 11 #Reset Count
 ```
 ### Wiring
 ## Launchpad 4  
@@ -88,13 +148,58 @@ I did the "spicy" version of this assignment this entailed me to make a system t
 ### Evidence
 ### Code
 ```python
+# type: ignore
+import time
+import board
+import digitalio
+import pwmio
+from adafruit_motor import servo
 
+Gled = digitalio.DigitalInOut(board.GP0)    #Sets LED pin
+Gled.direction = digitalio.Direction.OUTPUT
+Rled = digitalio.DigitalInOut(board.GP2)    #Sets LED pin
+Rled.direction = digitalio.Direction.OUTPUT 
+Button = digitalio.DigitalInOut(board.GP1)  #Sets Button pin
+Button.pull = digitalio.Pull.DOWN   #Sets Pulldown
+pwm_servo = pwmio.PWMOut(board.GP28, duty_cycle=2 ** 15, frequency=50)
+servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
+Count_time = 11 #creates a variables for button, counter and debounce  
+Button_state = 0
+Start_value = 0
+while True:
+     if Button.value == True and Button_state == 0:  #button debounce
+         Button_state = 1
+         Start_value = Start_value + 1
+     if Button.value == False:  #button debounce
+         Button_state = 0
+     if Count_time >= 1 and Start_value == 1: #Previous Count code with servo
+          Gled.value = False
+          Count_time = Count_time - 1
+          Rled.value = True
+          time.sleep(.5)
+          Rled.value = False
+          time.sleep(.5)
+          print(Count_time)
+          servo1.angle = 180
+     if Count_time == 0 and Start_value == 1: #Previous Launch code with servo
+          print("Launch")
+          Gled.value = True
+          Rled.value = False
+          time.sleep(2)
+          servo1.angle = 0  #Reset Servo
+     if   Start_value == 2:
+         print("abort")
+     if Start_value == 3:
+         Start_value = 1
+         Count_time = 11
 ```
 ### Wiring
 
 ## Crash Avoidance Part 1
 ### Assignment Description
 ### Evidence
+![image](https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/assets/112961442/1d937502-9afe-4852-a89a-50f0ba8071b3)
+
 ### Code
 ```python
 
