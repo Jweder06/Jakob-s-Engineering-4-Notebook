@@ -6,10 +6,7 @@
 ### Assignment Description
 This Assignment was a part of the pico introduction. It was a simple assignment to get us used to the Raspberry Pi and the Python language. The assignment was to make an LED blink on and off.
 
-### Evidence
-
-
-
+## Evidence
 ### Code
 ```python
 # type: ignore
@@ -27,15 +24,17 @@ while True:
     time.sleep(1)
 ```
 ### Video
+<img src="" width="500">
+
 ### Reflection 
 For me this assignment was a very basic introduction back into VS code. I learned how to operate a pico and how to edit and save the code on the pico. I also learned how to find a pinmap of the pic itself.
 
-## Launchpad 1 
+# Launchpad 1 
 
 ### Assignment Description
 In this assignment we where tasked with making a countdown timer, counting down from 10 to 0, with a interval of 1 second after wich we would print "launch".
 
-### Evidence
+## Evidence
 
 
 ### Code
@@ -58,16 +57,16 @@ while True:
         if Count_time == 0: #Count over
             print("Launch") #prints launch
 ```            
-
+### Video
+<img src="images\Countdown LP1.gif" width="500">
 ### Reflection
 This assignment was also a introductory one that taught us how to activate a LED by controlling a pin. It uses the previous code as a base and taught me how to add more complexity into my original code. I also learned how to properly restart my code and how to reset the pico when the code was finished.
 
-## Launchpad 2 
 
-
+# Launchpad 2 
 ### Assignment Description
 In this assignment we where tasked with creating a countdowntime but one that signaled the countdown with an LED. The LED would blink once every second and when the countdown reached 0 another LED would turn on.
-### Evidence
+## Evidence
 ### Code
 ```python
 # type: ignore
@@ -96,11 +95,22 @@ while True:
             Rled.value = False  #Turn Red LED off
 ```
 ### Wiring
-## Launchpad 3 
+
+<img src="images\Launchpad 2.png" width="500">
+
+### Video
+<img src="images\LP2.gif" width="500">
+
+### Reflection
+This assignment was another introductory one but was also important for me to relearn the basics of wiring and powering an LED. It also taught me how to pull up a pin map and what each pin is for on the Pico. The most important thing that I took away from this assignment was reintroducing the basics of coding for example in the beginning I forgot to properly space my if statements in my while true and even asked for help for such a basic mistake.
+
+
+
+# Launchpad 3 
  
 ### Assignment Description
 I did the "spicy" version of this assignment this entailed me to make a system that "aborted" the launch on the second button press. This would then reset the countdown to the original state of waiting for the first button press.
-### Evidence
+## Evidence
 ### Code
 ```python
 # type: ignore
@@ -143,9 +153,22 @@ while True:
         Count_time = 11 #Reset Count
 ```
 ### Wiring
-## Launchpad 4  
+<img src="images\launchpad 3.png" width="500">
+
+### Video
+<img src="images\Ez gif LP3.gif" width="500">
+
+### Reflection
+This assignment was also building on the previous set of code and continued to reteach me the things I had forgotten throughout the summer. For this assignment, I debounced a button something that I had done a lot in my project from last year but had totally forgotten how to do it. The main problems I had were figuring out how to properly debounce and I was accidentally shorting my LED circuit because my resistors were touching. My main takeaways from this assignment were again relearning the basics but also to double check my wiring.
+
+
+
+
+
+# Launchpad 4  
 ### Assignment Description
-### Evidence
+In this assignment, we had to build on the previous code and add a Servo that once the launch counter had reached zero we had to retract the” launch arm” and make sure all the previous systems still worked.
+## Evidence
 ### Code
 ```python
 # type: ignore
@@ -194,14 +217,79 @@ while True:
          Count_time = 11
 ```
 ### Wiring
+<img src="images\Launchpad 4.png" width="500">
 
-## Crash Avoidance Part 1
+### Video
+<img src="images\LP4.gif" width="500">
+
+### Reflection
+In this assignment, we used the previous code to control a servo that would activate once the launch counter was finished again building on our previous code. Each assignment was progressively adding more capability to our Pico and each system was its own sort of module. This is a very valuable lesson I can take away on building not just code but  General systems within my projects modularly adding new capabilities and making my system more redundant. This assignment also taught me how to add libraries to my Pico something I had to relearn from last year.
+
+
+# Crash Avoidance Part 1
 ### Assignment Description
-### Evidence
+## Evidence
 
 
 ### Code
 ```python
+# type: ignore
+import adafruit_mpu6050 #import Variables
+import busio
+import board                                   
+import time
+import digitalio
 
+led = digitalio.DigitalInOut(board.GP0) #sets LED pin
+led.direction = digitalio.Direction.OUTPUT
+
+sda_pin = board.GP14    #sets SDA and SCL
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+
+while True:
+    led.value = False
+    print(mpu.acceleration) #Print acceleration
+    while mpu.acceleration[2] < 0.95: #Checkes acceleration for LED
+        led.value = True    #Turn LED off
+        print(mpu.acceleration) 
 ```
 ### Wiring
+<img src="images\Crash Avoindance 1.png" width="500">
+
+### Video
+<img src="images\Acel 1.gif" width="500">
+
+### Reflection
+
+
+
+# Crash Avoidance Part 2
+### Assignment Description
+## Evidence
+### Code
+```python
+```
+### Wiring
+<img src="" width="500">
+
+### Video
+<img src="" width="500">
+
+### Reflection
+
+
+# Crash Avoidance Part 3
+### Assignment Description
+## Evidence
+### Code
+```python
+```
+### Wiring
+<img src="" width="500">
+
+### Video
+<img src="" width="500">
+
+### Reflection

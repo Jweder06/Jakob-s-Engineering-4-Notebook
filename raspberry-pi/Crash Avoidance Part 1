@@ -18,4 +18,4 @@ while True:
     print(mpu.acceleration) #Print acceleration
     while mpu.acceleration[2] < 0.95: #Checkes acceleration for LED
         led.value = True    #Turn LED off
-        print(mpu.acceleration)
+        print(mpu.acceleration) 
