@@ -198,7 +198,7 @@ while True:
 ## Crash Avoidance Part 1
 ### Assignment Description
 ### Evidence
-![image](https://github.com/Jweder06/Jakob-s-Engineering-4-Notebook/assets/112961442/1d937502-9afe-4852-a89a-50f0ba8071b3)
+
 
 ### Code
 ```python
