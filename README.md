@@ -230,8 +230,8 @@ In this assignment, we used the previous code to control a servo that would acti
 
 # Crash Avoidance Part 1
 ### Assignment Description
+Integrate an MPU6050 accelerometer with a  Pico using I2C communication. Wire the MPU6050 to the Pico, read acceleration values in m/s² for x, y, and z axes, and display them on the serial monitor.
 ## Evidence
-
 
 ### Code
 ```python
@@ -264,23 +264,24 @@ while True:
 <img src="images\Acel 1.gif" width="500">
 
 ### Reflection
+For this assignment but most difficult part was definitely figuring out how the accelerometer actually worked “which way does this thing go”.The most interesting part was definitely the SDA and SCL pins which allowed us to communicate with our accelerometer.Otherwise it was the standard hook up a sensor and  test it by printing it into the serial monitor again teaching us modularity of our code.
 
 
 
 # Crash Avoidance Part 2
 ### Assignment Description
+We designed a crash avoidance module for a scout helicopter mission using a Pico. We incorporated a tilt sensor to activate an LED warning light when the helicopter tilted 90 degrees. The Pico was configured to run independently using a JST Battery power source.
 ## Evidence
-### Code
-```python
-```
+
 ### Wiring
-<img src="" width="500">
+<img src="images\Under construction.jpg" width="500">
 
 ### Video
-<img src="" width="500">
+<img src="images\Acel 2.gif" width="500">
 
 ### Reflection
-
+For this assignment I thought it would be relatively simple but how wrong I was.  I had wired everything up according to the instructions but my Pico would connect even though it had been working the day before.I tried switching out  connection cabling checking my power and ground pins to make sure I wasn't shorting  and everything checked out except for every time the board was plugged in the connection part would immediately get burning hot which is not a good sign. After looking for the short for almost the entire class  I decided to switch up my breadboard and rip  off the back adhesive exposing the wire connections and behold a short between my ground and power pins which luckily hadn't fried my Pico. 
+<img src="images\Breadboard.png" width="500">
 
 # Crash Avoidance Part 3
 ### Assignment Description
@@ -331,10 +332,11 @@ while True:
         print(mpu.acceleration) 
         text_area.text = f"Rotation: \n X:{round(mpu.gyro[0],3)} \n Y:{round(mpu.gyro[1],3)} \n Z:{round(mpu.gyro[2],3)}"   #tell the LCD the format of the aceleration text
 ```
-### Wiring
-<img src="" width="500">
+### The Holy Grail of Wiring
+<img src="images\Under construction.jpg" width="500">
 
 ### Video
-<img src="" width="500">
+<img src="images\Acel3.gif" width="500">
 
 ### Reflection
+After the disaster that was the last assignment I hope to get off on a better start. this started with stubbornly refusing to read the instructions and asking a bunch of stupid questions (sorry MR miller). Afterwards it was a smooth ride reading and following instructions to set up the accelerometer to print onto the OLED display. The most interesting and most difficult part was definitely getting the I2C addresses I'm plugging them into the code. 
