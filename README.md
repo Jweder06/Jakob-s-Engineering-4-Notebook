@@ -274,7 +274,7 @@ We designed a crash avoidance module for a scout helicopter mission using a Pico
 ## Evidence
 
 ### Wiring
-<img src="images\Under construction.jpg" width="500">
+<img src="images\ACEL 2 wire.png" width="500">
 
 ### Video
 <img src="images\Acel 2.gif" width="500">
@@ -333,7 +333,7 @@ while True:
         text_area.text = f"Rotation: \n X:{round(mpu.gyro[0],3)} \n Y:{round(mpu.gyro[1],3)} \n Z:{round(mpu.gyro[2],3)}"   #tell the LCD the format of the aceleration text
 ```
 ### The Holy Grail of Wiring
-<img src="images\Under construction.jpg" width="500">
+<img src="images\ACEL 3 wire.png" width="500">
 
 ### Video
 <img src="images\Acel3.gif" width="500">
