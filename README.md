@@ -334,7 +334,7 @@ while True:
 ```
 ### The Holy Grail of Wiring
 <img src="images\ACEL 3 wire.png" width="500">
-
+<img src="images\The holy grail.JPG" width="500">
 ### Video
 <img src="images\Acel3.gif" width="500">
 
