@@ -39,7 +39,7 @@ For this assignment we were instructed to take our previous part and use FDA to 
 <img src="images\FDA p3.png" width="500">
 
 ### Reflection
-
+The FDA simulation forced us to make a big decision fix our curent design or scrap it and start over with the new information we have learned. We decided to do both and redesign the previous part in a new part studio with some new additions. This proved to be the most efective path as we where much faster in creating the new part.
 
 # FEA Part 4 (Iterative Design)
 

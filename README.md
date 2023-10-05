@@ -334,9 +334,11 @@ while True:
 ```
 ### The Holy Grail of Wiring
 <img src="images\ACEL 3 wire.png" width="500">
+
 <img src="images\The holy grail.JPG" width="500">
+
 ### Video
 <img src="images\Acel3.gif" width="500">
 
 ### Reflection
-After the disaster that was the last assignment I hope to get off on a better start. this started with stubbornly refusing to read the instructions and asking a bunch of stupid questions (sorry MR miller). Afterwards it was a smooth ride reading and following instructions to set up the accelerometer to print onto the OLED display. The most interesting and most difficult part was definitely getting the I2C addresses I'm plugging them into the code. 
+After the disaster that was the last assignment I hope to get off on a better start. this started with stubbornly refusing to read the instructions and asking a bunch of stupid questions (sorry Mr miller). Afterwards it was a smooth ride reading and following instructions to set up the accelerometer to print onto the OLED display. The most interesting and most difficult part was definitely getting the I2C addresses and plugging them into the code. 
