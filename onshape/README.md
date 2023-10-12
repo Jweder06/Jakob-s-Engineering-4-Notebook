@@ -1,3 +1,5 @@
+
+# Onshape(FDA)
 # FEA_Part_1_(Beam_Design)
 
 ### Assignment Description
@@ -38,8 +40,10 @@ For this assignment we were instructed to take our previous part and use FDA to 
 ### Part Image
 <img src="images\FDA p3.png" width="500">
 
+<img src="images\FDA image.png" width="500">
+
 ### Reflection
-The FDA simulation forced us to make a big decision fix our curent design or scrap it and start over with the new information we have learned. We decided to do both and redesign the previous part in a new part studio with some new additions. This proved to be the most efective path as we where much faster in creating the new part.
+The FDA simulation forced us to make a big decision fix our curent design or scrap it and start over with the new information we learned. We decided to do both and redesign the previous part in a new part studio with some new additions. This proved to be the most efective path as we where much faster in creating the new part but had a mush better outcome.
 
 # FEA Part 4 (Iterative Design)
 
