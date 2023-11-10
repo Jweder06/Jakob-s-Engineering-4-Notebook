@@ -420,3 +420,72 @@ Three things went wrong:
 Improvments:
 * N/A, our sedign in more complicated and gholds the same weight due to an unfortunate mishap.
 * Designing speed, I spent 8 hours designing this incorrectly, I learned how to OnShape faster and thats it.
+
+# landing Area Part 1 (Functions)
+
+### Assignment Description
+In this assignment we used a function to return the area of a triangle from user inputed x,y cordinate points.
+## Evidence
+
+### Code
+```python
+# type: ignore
+import time #import time
+x1 = 0
+x2 = 0
+x3 = 0
+y1 = 0
+y2 = 0
+y3 = 0      #Declare point values
+
+def Triangle(Inputv):
+    try:
+        listvalues = Inputv.split(",")  #split Inputed vaue
+        x1 = float(listvalues[0])   #assign each input value its position according to the order of the number in the list
+        x2 = float(listvalues[2])
+        x3 = float(listvalues[4])
+        y1 = float(listvalues[1])
+        y2 = float(listvalues[3])
+        y3 = float(listvalues[5])
+        area = abs(x1*(y2-y3) + x2*(y3 - y1) + x3*(y1 - y2))*.5 #calculate triangle area
+        return area
+    except ValueError:  #bad triangle
+        area = -1
+        return area
+while True:
+    Inputv = input('Enter triangle points in x1,y2,x2,y2,x3,y3') #asks for user input
+    PrintValue = Triangle(Inputv)
+    if PrintValue > 0:  #state machine asking wether the value is 1:a triangle,2: A wrong user input or 3: correct triangle
+        print(PrintValue)
+    elif PrintValue == 0:
+        print('not valid triangle')   
+    elif PrintValue < 0:
+        print('Worng user input')    
+```
+
+### Video
+<img src="images\Landing Area Part 1 gif.gif" width="500">
+
+### Reflection
+
+# landing Area Part 2 (Plotting)
+
+### Assignment Description
+
+## Evidence
+
+### Video
+<img src="" width="500">
+
+### Code
+```python
+ 
+```
+### Wiring
+<img src="" width="500">
+
+
+### Video
+<img src="" width="500">
+
+### Reflection
