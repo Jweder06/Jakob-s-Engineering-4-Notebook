@@ -26,13 +26,18 @@ x2 = 0
 x3 = 0
 y1 = 0
 y2 = 0
-y3 = 0      #Declare point values
+y3 = 0  
+area = 0    #Declare point values
+hlinex = Line(0,32,128,32, color=0xFFFF00)
+hliney = Line(64,0,64,64, color=0xFFFF00)
+circle = Circle(64,32,2, outline=0xFFFF00)
 
-title = "Graph"
-text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
-splash.append(text_area)
+splash.append(circle)
+splash.append(hlinex)
+splash.append(hliney)
 display.show(splash)
 
+display.show(splash)
 
 def Trianglef(Inputv):
     try:
@@ -59,14 +64,14 @@ while True:
     Inputv = input('Enter triangle points in x1,y2,x2,y2,x3,y3') #asks for user input
     area,x1,x2,x3,y1,y2,y3 = Trianglef(Inputv)
     PrintValue = area
-    print(area,x1,x2,x3,y1,y2,y3)
     if PrintValue > 0:  #state machine asking wether the value is 1:a triangle,2: A wrong user input or 3: correct triangle
         print(PrintValue)
-        triangle = Triangle(int(x1-64),int(32-y3),int(x2-64),int(32-y2),int(x3-64),int(32-y3),outline=0xFFFF00)
-        splash.append(triangle)
+        triangle = Triangle(int(x1+64),int(32-y1),int(x2+64),int(32-y2),int(x3+64),int(32-y3),outline=0xFFFF00)
+        splash.append(triangle) 
+        text_area = label.Label(terminalio.FONT, text=str(area), color=0xFFFF00, x=5, y=5)
+        splash.append(text_area)
+        display.show(splash)
     elif PrintValue == 0:
         print('not valid triangle')   
     elif PrintValue < 0:
-        print('Worng user input')   
-
-
+        print('Worng user input')  
