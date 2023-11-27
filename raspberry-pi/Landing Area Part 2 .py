@@ -17,7 +17,7 @@ scl_pin = board.GP15
 
 splash = displayio.Group()
 
-i2c = busio.I2C(scl_pin, sda_pin)
+i2c = busio.I2C(scl_pin, sda_pin)           #Setup for OLED
 display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP5)
 display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
 
@@ -32,7 +32,7 @@ hlinex = Line(0,32,128,32, color=0xFFFF00)
 hliney = Line(64,0,64,64, color=0xFFFF00)
 circle = Circle(64,32,2, outline=0xFFFF00)
 
-splash.append(circle)
+splash.append(circle)   #tell OLED to display lines and origin
 splash.append(hlinex)
 splash.append(hliney)
 display.show(splash)
@@ -51,11 +51,11 @@ def Trianglef(Inputv):
         area = abs(x1*(y2-y3) + x2*(y3 - y1) + x3*(y1 - y2))*.5 #calculate triangle area
         return [area,x1,x2,x3,y1,y2,y3]
     except ValueError:  #bad triangle
-        x1 = 0
+        x1 = 0  #Stops error with no output
         x2 = 0
-        x3 = 0
+        x3 = 0  
         y1 = 0
-        y2 = 0
+        y2 = 0  
         y3 = 0
         area = -1
         return [area,x1,x2,x3,y1,y2,y3]
@@ -68,10 +68,11 @@ while True:
         print(PrintValue)
         triangle = Triangle(int(x1+64),int(32-y1),int(x2+64),int(32-y2),int(x3+64),int(32-y3),outline=0xFFFF00)
         splash.append(triangle) 
-        text_area = label.Label(terminalio.FONT, text=str(area), color=0xFFFF00, x=5, y=5)
+        text_area = label.Label(terminalio.FONT, text=str(area), color=0xFFFF00, x=5, y=5)  #positional information for the text displayed onto the OLED
         splash.append(text_area)
         display.show(splash)
-    elif PrintValue == 0:
+    elif PrintValue == 0: #state machine asking wether the value is 1:a triangle,2: A wrong user input or 3: correct triangle
+        print(PrintValue)
         print('not valid triangle')   
     elif PrintValue < 0:
         print('Worng user input')  
