@@ -471,12 +471,12 @@ For this assignment I learned how to use functions together with the input, spli
 # landing Area Part 2 (Plotting)
 
 ### Assignment Description
-In this assignment we had to add on to the previous code and now display the triangle on an OLED display
+In this assignment we had to add on to the previous code and now display the triangle or landing area on an OLED display while also calculating area
 
 ## Evidence
 
 ### Video
-<img src="" width="500">
+<img src="images\Landing Area Part 2 gif.gif" width="500">
 
 ### Code
 ```python
@@ -563,6 +563,25 @@ while True:
 ### Wiring
 <img src="" width="500">
 
+
+### Video
+<img src="" width="500">
+
+### Reflection
+
+# Morse Code Part 2 (Transmission)
+
+### Assignment Description
+
+## Evidence
+
+### Video
+<img src="" width="500">
+
+### Code
+```python
+
+```
 
 ### Video
 <img src="" width="500">
