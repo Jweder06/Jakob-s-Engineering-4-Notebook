@@ -571,6 +571,7 @@ In this assignment, I had issues with using the display and understanding how to
 # Morse Code Part 1 (Translation)
 
 ### Assignment Description
+In this assignment, I had to take a written input and turn it into dots and dashes that I would then print out.
 
 ## Evidence
 
@@ -610,13 +611,17 @@ while True:
 ### Video
 <img src="images\Morse Code pt 1.gif" width="500">
 
-### Wiring
-<img src="images\Morse Code Wire .png" width="500">
+
 
 ### Reflection
+In This assignment introduced dictionaries and how to use dictionaries to translate words into dots and dashes. The most difficult part of this assignment was definitely getting the words into the right format and making sure that they where being translated correctly I had to take the dots and dashes and translate them into a on and off sequence for a LED that would "transmit" morse code.
+
+
+
 # Morse Code Part 2 (Transmission)
 
 ### Assignment Description
+In this assignment, I had to take the dots and dashes and translate them into an on and off-sequence for a LED that would "transmit" morse code.
 
 ## Evidence
 
