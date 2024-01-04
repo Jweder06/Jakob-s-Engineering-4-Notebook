@@ -475,9 +475,6 @@ In this assignment we had to add on to the previous code and now display the tri
 
 ## Evidence
 
-### Video
-<img src="images\Landing Area Part 2 gif.gif" width="500">
-
 ### Code
 ```python
  # type: ignore
@@ -560,23 +557,22 @@ while True:
         print('Worng user input')  
 
 ```
-### Wiring
-<img src="" width="500">
-
-
 ### Video
-<img src="" width="500">
+<img src="images\Landing Area Part 2 gif.gif" width="500">
+
+### Wiring
+<img src="images\Landing PT2.png" width="500">
 
 ### Reflection
+In this assignment, I had issues with using the display and understanding how to use Splash. append and display show. This included using the triangle and line functions. It was really easy to get the graph setup. Still, by far the hardest part of the assignment was moving the variables from the function collecting the points, and calculating the area inside the triangle function. 
+
+
 
 # Morse Code Part 1 (Translation)
 
 ### Assignment Description
 
 ## Evidence
-
-### Video
-<img src="" width="500">
 
 ### Code
 ```python
@@ -612,7 +608,10 @@ while True:
 ```
 
 ### Video
-<img src="" width="500">
+<img src="images\Morse Code pt 1.gif" width="500">
+
+### Wiring
+<img src="images\Morse Code Wire .png" width="500">
 
 ### Reflection
 # Morse Code Part 2 (Transmission)
@@ -620,9 +619,6 @@ while True:
 ### Assignment Description
 
 ## Evidence
-
-### Video
-<img src="" width="500">
 
 ### Code
 ```python
@@ -679,6 +675,51 @@ while True:
 ```
 
 ### Video
+<img src="images\MorsecodePT2.gif" width="500">
+
+### Wiring
+<img src="images\Morse Code Wire .png" width="500">
+
+### Reflection
+
+
+
+# Data Part 1 (Storage)
+
+### Assignment Description
+
+## Evidence
+
+### Code
+```python
+
+```
+
+### Video
+<img src="" width="500">
+
+### Wiring
+<img src="" width="500">
+
+### Reflection
+
+
+
+# Data Part 2 (Analysis)
+
+### Assignment Description
+
+## Evidence
+
+### Code
+```python
+
+```
+
+### Video
+<img src="" width="500">
+
+### Wiring
 <img src="" width="500">
 
 ### Reflection
