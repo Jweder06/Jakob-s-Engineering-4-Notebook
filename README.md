@@ -614,14 +614,13 @@ while True:
 
 
 ### Reflection
-In This assignment introduced dictionaries and how to use dictionaries to translate words into dots and dashes. The most difficult part of this assignment was definitely getting the words into the right format and making sure that they where being translated correctly I had to take the dots and dashes and translate them into a on and off sequence for a LED that would "transmit" morse code.
-
+In This assignment introduced dictionaries and how to use dictionaries to translate words into dots and dashes. The most difficult part of this assignment was definitely getting the words into the right format and making sure that they where translated correctly. Getting the code to read and output the right information instead of trying to output all of them at once for example was a problem that I faced.
 
 
 # Morse Code Part 2 (Transmission)
 
 ### Assignment Description
-In this assignment, I had to take the dots and dashes and translate them into an on and off-sequence for a LED that would "transmit" morse code.
+In this assignment, I had to translate words inputted by a person into dots and dashes that would be printed into the serial monitor.
 
 ## Evidence
 
@@ -686,13 +685,13 @@ while True:
 <img src="images\Morse Code Wire .png" width="500">
 
 ### Reflection
-
+This Assignment built on the last one and used the translated dots and dashes to change the time in between on and off cycles on the red LED to simulate the transmission of morse code. Again the biggest problem was getting the format and syntax right.
 
 
 # Data Part 1 (Storage)
 
 ### Assignment Description
-
+I had to take the dots and dashes and translate them into an on-and-off sequence for an LED that would transmit morse code.
 ## Evidence
 
 ### Code
