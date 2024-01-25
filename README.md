@@ -691,21 +691,51 @@ This Assignment built on the last one and used the translated dots and dashes to
 # Data Part 1 (Storage)
 
 ### Assignment Description
-I had to take the dots and dashes and translate them into an on-and-off sequence for an LED that would transmit morse code.
+I had to take the data from an accelerometer which was set up in a previous assignment and then record the data on the pico in a data file.
 ## Evidence
 
 ### Code
 ```python
+# type: ignore
+import adafruit_mpu6050 #import Variables
+import busio
+import board                                   
+import time
+import digitalio
 
+led = digitalio.DigitalInOut(board.GP0) #sets LED pin
+led.direction = digitalio.Direction.OUTPUT
+
+sda_pin = board.GP14    #sets SDA and SCL
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+tilt = False
+
+
+while True:
+    with open("/data.csv", "a") as datalog:
+        if mpu.acceleration[2] < 9:
+            led.value = False
+            tilt = False
+        else:
+            led.value = True
+            tilt = True 
+        Timeprint = time.monotonic()
+        datalog.write(f"{float(Timeprint)},{mpu.gyro[0],3},{mpu.gyro[1],3},{mpu.gyro[2],3},{tilt},{mpu.acceleration[2]}\n")
+        datalog.flush()
+        time.sleep(0.25)
 ```
-
-### Video
-<img src="" width="500">
 
 ### Wiring
 <img src="" width="500">
 
 ### Reflection
+For this assignment the most difficult part was using data and code mode where you would make a change and then unplug and replug over and over. another Problem was geting the syntax right for the formating for example time was writen as one number becasue it only gave the time between startup and the frist time it asks for time.
+| Time      | X | Y | Z      | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+|7.503	      | -0.0234487	| 3           |	-0.0125237	| 3	-0.0868667|
+
 
 
 
