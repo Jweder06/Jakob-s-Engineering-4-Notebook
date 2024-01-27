@@ -731,18 +731,37 @@ while True:
 <img src="" width="500">
 
 ### Reflection
-For this assignment the most difficult part was using data and code mode where you would make a change and then unplug and replug over and over. another Problem was geting the syntax right for the formating for example time was writen as one number becasue it only gave the time between startup and the frist time it asks for time.
-| Time      | X | Y | Z      | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-|7.503	      | -0.0234487	| 3           |	-0.0125237	| 3	-0.0868667|
-
+For this assignment the most difficult part was using data and code mode where you would make a change and then unplug and replug over and over. another Problem was getting the syntax right for the formatting for example time was written as one number because it only gave the time between startup and the first time it asks for time. Their was also a problem getting the tilt to show up properly and then recording it.
+| Time        | X           | Y           | Z           | Tilt        |Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+|7.503	      | -0.0234487	| 3           |	-0.0125237	| 3           |	-0.0868667  |
+|8.043        |-0.0731439   | 3           |-0.00293109  | 3           |-0.0171868   |
+|8.439|-0.0764747|3|-0.0021317|3|-0.0166539|
+|8.833|-0.0762082|3|-0.00106585|3|-0.0171868|
+|9.229|-0.0756753|3|-0.00173201|3|-0.0165207|
+|10.019|-0.0762082|3|-0.00546248|3|-0.0174533|
+|10.412|-0.0775405|3|-0.000399694|3|-0.016121|
+|10.807|-0.0748759|3|0.000666156|3|-0.0175865|
+|11.199|-0.0735436|3|-0.00279786|3|-0.0175865|
+|11.592|-0.0759418|3|-0.00226493|3|-0.017853|
+|11.99|-0.0771409|3|-0.00399694|3|-0.0186524|
+|12.506|-0.0762082|3|-0.00226493|3|-0.0179862|
+|12.905|-0.0767412|3|-0.00306432|3|-0.0190521|
+|13.301|-0.0764747|3|-0.00359724|3|-0.0165207|
+|13.702|-0.0766079|3|-0.00626187|3|-0.0169204|
+|14.101|-0.0731439|3|-0.00199847|3|-0.0191853|
+|14.497|-0.076075|3|-0.00199847|3|-0.0201179|
+|14.892|-0.0742098|3|-0.000532925|3|-0.017853|
+|15.292|-0.0750091|3|-0.00346401|3|-0.0181194|
 
 
 
 # Data Part 2 (Analysis)
 
 ### Assignment Description
-
+Create a line graph with time on the X axis and acceleration on the Y axis. X, Y, and Z accelerations must be present on the same plot.
+Create a chart with time on the X axis and whether or not the Pico was tilted on the Y axis. 
+Title each graph, and label each axis including units. 
 ## Evidence
 
 ### Code
