@@ -728,7 +728,9 @@ while True:
 ```
 
 ### Wiring
-<img src="" width="500">
+<img src="images\ACEL 2 wire.png" width="500">
+
+Its the same
 
 ### Reflection
 For this assignment the most difficult part was using data and code mode where you would make a change and then unplug and replug over and over. another Problem was getting the syntax right for the formatting for example time was written as one number because it only gave the time between startup and the first time it asks for time. Their was also a problem getting the tilt to show up properly and then recording it.
