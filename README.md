@@ -755,26 +755,3 @@ For this assignment the most difficult part was using data and code mode where y
 |14.497|-0.076075|3|-0.00199847|3|-0.0201179|
 |14.892|-0.0742098|3|-0.000532925|3|-0.017853|
 |15.292|-0.0750091|3|-0.00346401|3|-0.0181194|
-
-
-
-# Data Part 2 (Analysis)
-
-### Assignment Description
-Create a line graph with time on the X axis and acceleration on the Y axis. X, Y, and Z accelerations must be present on the same plot.
-Create a chart with time on the X axis and whether or not the Pico was tilted on the Y axis. 
-Title each graph, and label each axis including units. 
-## Evidence
-
-### Code
-```python
-
-```
-
-### Video
-<img src="" width="500">
-
-### Wiring
-<img src="" width="500">
-
-### Reflection
